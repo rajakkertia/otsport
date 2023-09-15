@@ -1,0 +1,77 @@
+.wrapper {
+  @apply flex flex-col justify-start items-center h-[calc(100vh-152px)] overflow-scroll;
+
+  .title {
+    @apply text-4xl font-medium uppercase mt-6;
+  }
+  .slogan {
+    @apply text-xl font-medium uppercase w-1/2 text-center mt-6 mb-8;
+  }
+
+  .container {
+    @apply flex justify-center items-center flex-col;
+
+    .header {
+      @apply flex justify-center w-[80%] text-xl  text-[#19002D]  uppercase border-b border-[#19002D] pb-2 font-bold;
+    }
+    .aboutus {
+      @apply w-[80%];
+      .title {
+        @apply text-[#19002D] font-medium text-4xl capitalize flex justify-center m-2;
+      }
+      .subtitle {
+        @apply text-[#A3A9F5] font-bold text-2xl uppercase flex justify-center m-2;
+      }
+      .maintext {
+        @apply text-[#1D1D1D] flex justify-center m-2;
+      }
+      .images {
+        @apply flex justify-between px-2 pb-6 mt-9 border-b border-[#19002D];
+      }
+    }
+    .ourvision {
+      @apply w-[80%];
+
+      @apply flex flex-col justify-center items-center text-[#19002D]  mt-6;
+
+      .text {
+        @apply my-6;
+      }
+    }
+
+    .ourpartners {
+      @apply flex flex-col justify-center items-center bg-black;
+
+      .title {
+        @apply text-white;
+      }
+      .slogan {
+        @apply text-[#A3A9F5];
+      }
+      .text {
+        @apply text-[#D8D8D8] w-[80%] mb-6;
+      }
+    }
+
+    .partners {
+      @apply w-[80%] border border-[#5C5C5C] mb-4;
+    }
+
+    .ourprojects {
+      @apply flex flex-col justify-center items-center;
+
+      .slogan {
+        @apply text-[#A3A9F5];
+      }
+    }
+  }
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

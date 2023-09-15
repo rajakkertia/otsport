@@ -1,0 +1,43 @@
+.wrapper {
+  @apply bg-[#19002D] flex h-full mx-auto md:flex md:items-center md:justify-center; //max-w-7xl
+
+  .container {
+    @apply flex justify-center relative;
+  }
+
+  .image {
+    @apply mt-24 w-[80%] h-full object-contain object-top z-[1];
+  }
+
+  .pages {
+    @apply absolute self-end mb-10 z-[2] w-[85%] flex flex-col bg-[#19002D] text-xl text-white max-w-7xl border border-[#ffffff42] sm:flex sm:flex-row sm:mb-20 sm:text-4xl sm:font-bold;
+
+    .menuItem {
+      @apply flex justify-between items-center py-3 border-b border-[#ffffff42];
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    a {
+      @apply flex mx-2 justify-center items-center;
+
+      &:hover {
+        @apply text-[#4932EB];
+      }
+
+      &.for-players:hover {
+        @apply text-[#3E7FFF];
+      }
+
+      &.for-agencies {
+        @apply border-0;
+      }
+      &.for-agencies:hover {
+        @apply text-[#741FE2];
+      }
+    }
+  }
+}

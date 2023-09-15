@@ -1,0 +1,20 @@
+.wrapper {
+  @apply w-full flex flex-col items-start justify-start m-3 p-4;
+  .text {
+    @apply text-[#8F8F8F]  h-full overflow-hidden mt-3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .btn {
+    @apply text-white font-bold mt-3;
+    transition: transform 0.2s;
+
+    &:hover {
+      @apply text-[#4932EB];
+      -ms-transform: scale(1.15); /* IE 9 */
+      -webkit-transform: scale(1.15); /* Safari 3-8 */
+      transform: scale(1.15);
+    }
+  }
+}
