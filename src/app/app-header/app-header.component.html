@@ -1,4 +1,4 @@
-<header class="wrapper">
+<!-- <header class="wrapper"> -->
   <nav class="navigaion" aria-label="Global"> <!--max-w-7xl-->
     <div class="logo">
       <a href="#">
@@ -6,6 +6,7 @@
         <img src="../../assets/logo.svg" alt="">
       </a>
     </div>
+    <div class="pageName">{{pageName}}</div>
     <div class="navitems">
       <app-language-items></app-language-items>
       <div (click)="toggleMainMenu()">
@@ -13,6 +14,7 @@
       </div>
     </div>
   </nav>
+<!-- </header> -->
 
   <!-- <ng-template #hamburgerIcon>
     <img src="../../assets/menuOpen.svg" class="h-6 w-6" fill="none">
@@ -20,8 +22,7 @@
 
   <ng-template #xIcon>
     <img src="../../assets/menuClose.svg" class="h-6 w-6" fill="none">
-  </ng-template>
-</header> -->
+  </ng-template> -->
 
 <div *ngIf="menuToggled" [@slideInOut]="menuToggled ? 'visible' : 'hidden'" class="fixed w-full">
   <div class="menuToggle">

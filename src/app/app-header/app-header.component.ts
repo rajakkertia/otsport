@@ -19,6 +19,10 @@ import { slideInOutAnimation } from '../animations';
   // ],
 })
 export class AppHeaderComponent implements OnInit {
+
+  @Input() pageName = "";
+
+
   constructor() {}
 
   ngOnInit(): void {}

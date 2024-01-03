@@ -1,5 +1,5 @@
 .app-container {
-  @apply flex flex-col  h-screen;
+  @apply flex flex-col h-screen;
 }
 
 header {
@@ -11,5 +11,5 @@ main {
 }
 
 footer {
-  @apply h-24;
+  @apply h-24 w-full;
 }

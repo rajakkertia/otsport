@@ -1,0 +1,14 @@
+.selected {
+  @apply border-2 border-[#00F5FF];
+  // border: 2px solid blue; /* Add your desired border style for the selected footballer */
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  

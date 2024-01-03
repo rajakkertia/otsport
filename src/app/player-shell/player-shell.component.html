@@ -1,0 +1,7 @@
+<div class="wrapper">
+<div class="container">
+    <app-player-info class="containerleft" [selectedFootballer]="selectedFootballer" (goBack)="onGoBack()"></app-player-info>
+    <app-players class="containerright" [footballers]="footballers" [selectedFootballer]="selectedFootballer" (selectFootballer)="onSelectFootballer($event)"></app-players>
+</div>
+</div>
+

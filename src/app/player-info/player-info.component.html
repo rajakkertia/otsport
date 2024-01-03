@@ -1,0 +1,14 @@
+  <div>
+    <button *ngIf="selectedFootballer" (click)="goBack.emit()">Back</button>
+    <div *ngIf="!selectedFootballer; else playerInfo">
+      <p>Select a player from the list</p>
+    </div>
+    <ng-template #playerInfo>
+      <img src="{{ selectedFootballer.avatarUrl }}">
+      <div class="text-xl font-medium">{{ selectedFootballer.name }} {{selectedFootballer.surname}}</div>
+      <div class="font-medium text-[#848484]">{{ selectedFootballer.position }}</div>
+      <div class="">{{selectedFootballer.description}}</div>
+
+      <!-- Add more player information as needed -->
+    </ng-template>
+  </div>

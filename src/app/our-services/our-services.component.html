@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="leftside">
+        <span class="title">our services</span>
+        <div class="leftText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nemo quo in sunt doloribus
+            mollitia numquam possimus quis nam! Molestiae, quam tenetur voluptatibus saepe fugit sunt maiores
+            recusandae! Nostrum, suscipit.</div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/emXsWr9XbZc"></iframe>
+        </div>
+    </div>
+    <div class="rightside">
+        <div class="services">
+            <ul>
+                <li *ngFor="let item of serviceList; let i = index">
+                    <div>{{item}}</div>
+                    <div class="opacity-80"> {{i+1}}</div>
+                </li>
+            </ul>
+        </div>
+        <div class="contactUs">Contact Us ></div>
+    </div>
+</div>

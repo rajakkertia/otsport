@@ -16,6 +16,15 @@ import { LanguageItemsComponent } from './language-items/language-items.componen
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PartnerComponent } from './partner/partner.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PartnersComponent } from './partners/partners.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { ForplayersComponent } from './forplayers/forplayers.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { PlayersComponent } from './players/players.component';
+import { PlayerInfoComponent } from './player-info/player-info.component';
+import { PlayerShellComponent } from './player-shell/player-shell.component';
+import { PartnerInfoComponent } from './partner-info/partner-info.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,16 @@ import { PartnerComponent } from './partner/partner.component';
     AppFooterComponent,
     MainPageComponent,
     PartnerComponent,
-    
+    AboutUsComponent,
+    PartnersComponent,
+    OurProjectsComponent,
+    ForplayersComponent,
+    OurServicesComponent,
+    PlayersComponent,
+    PlayerInfoComponent,
+    PlayerShellComponent,
+    PartnerInfoComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,8 +56,8 @@ import { PartnerComponent } from './partner/partner.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],

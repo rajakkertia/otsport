@@ -1,8 +1,8 @@
 export interface Partner {
-  id: number;
+  _id: string;
   name?: string;
   subtitle?: string;
-  info?: string;
+  description?: string;
   logo?: string;
   youtube?: string;
   instagram?: string;

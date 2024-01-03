@@ -1,15 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-forclubs',
   templateUrl: './forclubs.component.html',
-  styleUrls: ['./forclubs.component.scss']
+  styleUrls: ['./forclubs.component.scss'],
 })
 export class ForclubsComponent implements OnInit {
+  @ViewChild('aboutus') aboutUsElement: ElementRef | undefined;
 
-  constructor() { }
+  menuClass = "menu";
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
+  ngOnInit(): void {}
+
+  scrollToElement($element: any, sect: string): void {
+    console.log($element);
+    $element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+    // Update the URL when scrolling to About Us section
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { section: sect },
+      queryParamsHandling: 'merge',
+    });
+    if (sect === "partners"){
+      this.menuClass = "menuPartners";
+    }
+    else{
+      this.menuClass = "menu"
+    }
+
   }
 
+  aboutUs() {
+    this.router.navigate(['about-us'], { relativeTo: this.route });
+  }
+  partners() {
+    this.router.navigate(['partners'], { relativeTo: this.route });
+  }
+  projects() {
+    this.router.navigate(['our-projects'], { relativeTo: this.route });
+  }
 }

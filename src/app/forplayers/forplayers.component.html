@@ -1,1 +1,39 @@
-<p>forplayers works!</p>
+<div class="header">
+    for players
+</div>
+<!-- 
+<div class="maincontainer">
+    <div [ngClass]="menuClass">
+        <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button>
+        <button (click)="scrollToElement(partners, 'partners')">Partners</button>
+        <button (click)="scrollToElement(projects, 'projects')">Our Projects</button>
+        <button (click)="aboutUs()"></button>
+    <button (click)="partners()">Partners</button>
+    <button (click)="projects()">Our Projects</button>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div #aboutus><app-about-us></app-about-us></div>
+            <div #partners><app-partners></app-partners></div>
+            <div #projects><app-our-projects></app-our-projects></div>
+        </div>
+    </div>
+</div> -->
+
+<div class="maincontainer">
+    <div>
+        <div class="menu">
+            <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button>
+            <button (click)="scrollToElement(ourservices, 'ourservices')">Services</button>
+            <button (click)="scrollToElement(players, 'players')">Players</button>
+            <button (click)="scrollToElement(projects, 'projects')">Our Projects</button>
+        </div>
+    </div>
+    <div class="pages">
+        <div #aboutus><app-about-us></app-about-us></div>
+        <div #ourservices><app-our-services></app-our-services></div>
+        <div #players><app-player-shell></app-player-shell></div>
+        <!-- <div #partners><app-partners></app-partners></div> -->
+        <div #projects><app-our-projects></app-our-projects></div>
+    </div>
+</div>
