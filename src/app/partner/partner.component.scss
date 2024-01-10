@@ -1,5 +1,9 @@
 .wrapper {
-  @apply w-full flex flex-col items-start justify-start m-3 p-4;
+  @apply w-full flex flex-col m-3 p-4 items-center justify-center md:items-start md:justify-start;
+
+  .logo{
+      @apply w-3/5 h-3/5; 
+  }
   .text {
     @apply text-[#8F8F8F]  h-full overflow-hidden mt-3;
     display: -webkit-box;

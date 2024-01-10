@@ -2,7 +2,7 @@
   <ul class="flex">
     <li *ngFor="let footballer of footballers" (click)="selectFootballer.emit(footballer)" class="px-3 flex flex-col cursor-pointer"
       [ngClass]="{ 'selected': footballer === selectedFootballer }">
-    <img src="{{footballer.avatarUrl}}">
+    <img class="logo" src="{{footballer.logo}}">
     <div class="text-xl font-medium">{{ footballer.name }} {{footballer.surname}}</div>
     <div class="font-medium text-[#848484]">{{ footballer.position }}</div>
     </li>

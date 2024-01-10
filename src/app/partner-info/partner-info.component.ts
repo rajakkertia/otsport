@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-partner-info',
@@ -10,10 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class PartnerInfoComponent implements OnInit {
   
 
-  @Input() partnerInfo:any
+  // @Input() partnerInfo:any
   id?:any;
+  partnerInfo:any;
+  images = [];
+  trustedUrl :any ;
 
-  constructor(private _http:HttpClient, private _activatedRoute: ActivatedRoute) { }
+  constructor(private _http:HttpClient, private _activatedRoute: ActivatedRoute, private _router:Router, private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
 
@@ -22,9 +26,14 @@ export class PartnerInfoComponent implements OnInit {
     })
 
      this._http.get('http://admin.otsportmanagement.com/api/partner/'+this.id).subscribe((res)=>{
-      console.log(res)
+     this.partnerInfo = res;
+     this.images = this.partnerInfo.images.split(';'); 
+     this.trustedUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.partnerInfo.youtube);
      })
-    
+  }
+
+  goBack(){
+    this._router.navigate(['/partners'])
   }
 
 }

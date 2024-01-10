@@ -9,6 +9,10 @@
       <div class="font-medium text-[#848484]">{{ selectedFootballer.position }}</div>
       <div class="">{{selectedFootballer.description}}</div>
 
-      <!-- Add more player information as needed -->
+    <!-- <div class="images" *ngFor="let item of imageArray">
+    <img src="{{item}}"/>
+    </div> -->
+
+    <app-image-carousel [imageArray]="imageArray"></app-image-carousel>
     </ng-template>
   </div>

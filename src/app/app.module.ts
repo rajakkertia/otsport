@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShellComponent } from './shell/shell.component';
@@ -25,6 +24,8 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerInfoComponent } from './player-info/player-info.component';
 import { PlayerShellComponent } from './player-shell/player-shell.component';
 import { PartnerInfoComponent } from './partner-info/partner-info.component';
+import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { PartnerInfoComponent } from './partner-info/partner-info.component';
     PlayersComponent,
     PlayerInfoComponent,
     PlayerShellComponent,
-    PartnerInfoComponent
+    PartnerInfoComponent,
+    ImageCarouselComponent,
+    
 
   ],
   imports: [
@@ -56,7 +59,7 @@ import { PartnerInfoComponent } from './partner-info/partner-info.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
+    NgbModule
 
   ],
   providers: [],

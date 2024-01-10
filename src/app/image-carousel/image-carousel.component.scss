@@ -1,0 +1,12 @@
+.carousel-indicators img {
+    width: 50px; /* Adjust the width of the dot images */
+    height: 50px; /* Adjust the height of the dot images */
+    cursor: pointer;
+  }
+  .thumbnail {
+    width: 50px; /* Adjust the width of the thumbnail */
+    height: auto; /* Maintain the aspect ratio */
+    cursor: pointer;
+    margin: 5px; /* Adjust the margin between thumbnails */
+  }
+  

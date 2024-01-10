@@ -1,24 +1,24 @@
 .wrapper {
-  @apply flex flex-col h-[calc(100vh-152px)] w-full overflow-scroll  bg-black lg:flex-row lg:justify-between;
+  @apply flex flex-col h-[calc(100vh-152px)] w-full overflow-scroll bg-black lg:flex-row lg:justify-between;
   .leftside {
     @apply flex flex-col items-center lg:justify-between lg:border-r lg:border-white lg:w-1/2 lg:px-2;
     .title {
-      @apply text-white font-medium text-4xl capitalize flex justify-center lg:justify-start lg:text-8xl;
+      @apply text-white font-medium text-4xl capitalize flex justify-center ml-5 lg:justify-start lg:text-8xl;
     }
     .bottomside {
-      @apply flex flex-col items-center mb-36 lg:items-start;
+      @apply flex flex-col items-center mb-36 ml-5 lg:items-start;
       .slogan {
-        @apply text-[#A3A9F5]  text-xl font-medium uppercase text-center lg:text-2xl;
+        @apply text-[#A3A9F5]  text-xl font-medium uppercase text-center lg:text-2xl lg:h-1/6;
       }
       .text {
-        @apply text-[#D8D8D8] w-[80%] lg:pt-3;
+        @apply text-[#D8D8D8] w-[80%] lg:pt-3 lg:h-5/6;
       }
     }
   }
   .rightside {
     @apply flex flex-col items-center lg:w-1/2 lg:justify-between;
     .partners {
-      @apply lg:flex lg:flex-row lg:flex-wrap lg:justify-between;
+      @apply flex justify-center lg:flex lg:flex-row lg:flex-wrap lg:justify-between;
       .partner {
         @apply w-[80%] border border-[#5C5C5C] lg:w-[40%] m-5;
       }

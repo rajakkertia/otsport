@@ -2,6 +2,9 @@
   @apply border-2 border-[#00F5FF];
   // border: 2px solid blue; /* Add your desired border style for the selected footballer */
 }
+.logo{
+  @apply flex w-40 h-44;
+}
 
 .wrapper::-webkit-scrollbar {
     display: none;
