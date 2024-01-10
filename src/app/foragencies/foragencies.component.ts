@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-foragencies',
@@ -7,29 +8,43 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./foragencies.component.scss'],
 })
 export class ForagenciesComponent implements OnInit {
-  color = '';
-  data: any;
-  constructor(private _http: HttpClient) {}
+  @ViewChild('aboutus') aboutUsElement: ElementRef | undefined;
 
-  ngOnInit(): void {
-    this.generatePalette();
+  menuClass = "menu";
+
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
+  ngOnInit(): void {}
+
+  scrollToElement($element: any, sect: string): void {
+    console.log($element);
+    $element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+    // Update the URL when scrolling to About Us section
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { section: sect },
+      queryParamsHandling: 'merge',
+    });
+    if (sect === "partners"){
+      this.menuClass = "menuPartners";
+    }
+    else{
+      this.menuClass = "menu"
+    }
+
   }
 
-  generatePalette() {
-    const url = `http://10.166.15.13:3000/getPartners/65030ccc9322ce266dfffa66`;
-
-    const headers = new HttpHeaders({
-      'AAccess-Control-Allow-Origin': 'http://localhost:4200',
-    });
-    this._http.get(url, { headers }).subscribe((response) => {
-      try {
-        this.data = response;
-        console.log(this.data);
-      } catch (error) {
-        console.log(error);
-      }
-    });
-
-   
+  aboutUs() {
+    this.router.navigate(['about-us'], { relativeTo: this.route });
+  }
+  partners() {
+    this.router.navigate(['partners'], { relativeTo: this.route });
+  }
+  projects() {
+    this.router.navigate(['our-projects'], { relativeTo: this.route });
   }
 }

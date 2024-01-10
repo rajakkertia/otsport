@@ -26,11 +26,11 @@
 
 <div *ngIf="menuToggled" [@slideInOut]="menuToggled ? 'visible' : 'hidden'" class="fixed w-full">
   <div class="menuToggle">
-    <a [routerLink]="['/for-clubs']" class="menuItem for-clubs">FOR CLUBS <img src="../../assets/aicon.svg"
+    <a [routerLink]="['/for-clubs']" class="menuItem for-clubs" (click)="toggleMainMenu()">FOR CLUBS <img src="../../assets/aicon.svg"
         class="mx-4"></a>
-    <a [routerLink]="['/for-players']" class="menuItem for-players">FOR PLAYERS <img src="../../assets/aicon.svg"
+    <a [routerLink]="['/for-players']" class="menuItem for-players" (click)="toggleMainMenu()">FOR PLAYERS <img src="../../assets/aicon.svg"
         class="mx-4"></a>
-    <a [routerLink]="['/for-agencies']" class="menuItem for-agencies">FOR AGENCIES <img src="../../assets/aicon.svg"
+    <a [routerLink]="['/for-agencies']" class="menuItem for-agencies" (click)="toggleMainMenu()">FOR AGENCIES <img src="../../assets/aicon.svg"
         class="mx-4"></a>
   </div>
 </div>
