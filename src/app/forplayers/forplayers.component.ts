@@ -39,9 +39,9 @@ export class ForplayersComponent implements OnInit {
 
   }
 
-  aboutUs() {
-    this.router.navigate(['about-us'], { relativeTo: this.route });
-  }
+  // aboutUs() {
+  //   this.router.navigate(['about-us'], { relativeTo: this.route });
+  // }
   ourservices() {
     this.router.navigate(['our-services'], { relativeTo: this.route });
   }

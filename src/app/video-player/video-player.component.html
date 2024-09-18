@@ -1,0 +1,9 @@
+<!-- src/app/video-player/video-player.component.html -->
+ <div [@slideIn] class="video-container">
+  <video [muted]="'muted'" loop autoplay [src]="videoPath" #video class="video-element">
+    <source src="../../assets/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+

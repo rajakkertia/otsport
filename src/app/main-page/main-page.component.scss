@@ -1,62 +1,38 @@
 .wrapper {
-  @apply bg-[#19002D] flex justify-center overflow-hidden w-full h-full mx-auto px-0 sm:flex sm:px-0  md:items-center; //max-w-7xl
+  @apply bg-[#19002D] flex justify-center overflow-hidden w-full h-full mx-auto px-0 md:items-center;
 
   .container {
     @apply flex justify-center relative w-full;
 
-    .circle {
-      @apply absolute w-full -top-28  sm:-ml-52 sm:w-[70%];
-    }
-
-    .circle-md {
-      @apply hidden;
-    }
-
+    .circle,
+    .circle-md,
     .circle-bottom-md {
-      @apply hidden;
+      @apply hidden absolute;
+    }
+
+    .circle {
+      @apply w-full -top-28 sm:w-[80%];
     }
 
     @screen md {
-      .circle {
-        @apply hidden;
-      }
       .circle-md {
-        @apply absolute block w-full -mt-52 -ml-72 lg:w-2/3 lg:-mt-64 lg:-ml-96 lg:left-1/4 xl:w-[55%] xl:left-[28%];
+        @apply block h-3/5 -top-3/4 lg:-top-1/3 lg:h-1/2 lg:w-3/5 xl:w-[55%] xl:left-[28%];
       }
+
       .circle-bottom-md {
-        @apply absolute block w-full self-end -mb-[190px] -mr-64 lg:w-[90%] lg:-bottom-1/4 xl:w-[72%];
+        @apply block w-full h-3/5 -bottom-3/4 lg:w-[90%] lg:-bottom-1/4 xl:w-[72%];
       }
     }
 
-    .image {
-      @apply mt-9 w-[80%] h-full object-contain object-top z-[1] md:-mt-16 lg:w-[50%] xl:w-[40%];
-    }
-
-    .triangle-left {
-      @apply absolute w-[305px] h-[292px] self-end -ml-96 mb-20 sm:w-[500px] sm:h-[400px] md:-ml-[850px] md:self-start lg:h-[500px] xl:left-1/2;
-    }
-
-    .triangle-right {
-      @apply absolute self-end h-[250px] w-[300px] -mr-96 -mb-28 sm:w-[300px] sm:h-[250px] md:-mr-[800px] md:self-center lg:h-[600px] lg:w-[600px] lg:right-1/2 xl:right-[40%];
+    .video {
+      @apply mt-9 w-full h-full object-contain z-[1] bg-opacity-30 sm:h-4/5 lg:mt-4;
     }
 
     .pages {
-      @apply absolute flex flex-col self-end mb-10 z-[2] w-[75%] bg-[#19002D] text-xl text-white max-w-7xl border border-[#ffffff42] font-bold
-      sm:justify-center sm:text-xl sm:mb-10
-      md:flex-row md:justify-between md:bg-white md:text-[#19002D] md:w-full
-      lg:w-[70%] lg:mb-16
-      xl:w-[56%];
+      @apply absolute flex flex-col self-end p-2 mt-5 mb-10 z-[2] w-[75%] bg-[#19002D] text-xl text-white border border-[#ffffff42] font-bold sm:justify-center md:flex-row md:justify-between md:bg-white md:text-[#19002D] md:w-[98%] lg:w-[70%] xl:w-[56%];
 
       .menuItem {
         @apply flex justify-between items-center py-3 border-b border-[#ffffff42];
-      }
-
-      .icon {
-        @apply w-12 h-12 md:w-9 md:h-9;
-      }
-
-      a {
-        @apply flex mx-2 justify-center items-center;
 
         &:hover {
           @apply text-[#4932EB];
@@ -68,10 +44,15 @@
 
         &.for-agencies {
           @apply border-0;
+
+          &:hover {
+            @apply text-[#741FE2];
+          }
         }
-        &.for-agencies:hover {
-          @apply text-[#741FE2];
-        }
+      }
+
+      .icon {
+        @apply w-12 h-12 md:w-9 md:h-9;
       }
     }
   }

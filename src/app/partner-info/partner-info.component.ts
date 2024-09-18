@@ -25,7 +25,7 @@ export class PartnerInfoComponent implements OnInit {
       this.id = params['id'];
     })
 
-     this._http.get('http://admin.otsportmanagement.com/api/partner/'+this.id).subscribe((res)=>{
+     this._http.get('https://admin.otsportmanagement.com/api/partner/'+this.id).subscribe((res)=>{
      this.partnerInfo = res;
      this.images = this.partnerInfo.images.split(';'); 
      this.trustedUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.partnerInfo.youtube);

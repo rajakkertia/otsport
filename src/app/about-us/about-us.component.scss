@@ -1,21 +1,21 @@
 .wrapper {
-  @apply flex flex-col items-center h-[calc(100vh-180px)] w-full overflow-scroll;
+  @apply flex flex-col items-center h-[calc(100vh-180px)] w-full overflow-scroll bg-black;
 
   .container {
     @apply flex flex-col items-center md:flex-row md:items-start md:w-[80%] md:justify-between lg:w-1/2 lg:flex-row lg:justify-between lg:min-w-full lg:h-full;
 
     .containerleft {
-      @apply w-[80%] h-full flex flex-col justify-between md:border-r md:border-black md:mr-3 lg:border-r lg:justify-between lg:px-2;
+      @apply w-[80%] h-full flex flex-col justify-between md:border-r md:border-white md:mr-3 lg:border-r lg:justify-between lg:px-2;
 
       .title {
-        @apply text-[#19002D] font-medium text-4xl capitalize flex justify-center m-2;
+        @apply text-white font-medium text-4xl capitalize flex justify-center m-2;
       }
 
       .textleft {
         @apply my-20;
 
         .subtitle {
-          @apply text-[#A3A9F5] font-bold text-2xl uppercase flex justify-center m-2;
+          @apply text-white font-bold text-2xl uppercase flex justify-center m-2;
         }
       }
 
@@ -27,7 +27,7 @@
       }
     }
     .containerright {
-      @apply w-[80%] mt-4 flex flex-col justify-between text-[#19002D];
+      @apply w-[80%] mt-4 flex flex-col justify-between text-white;
 
       img {
         @apply w-fit h-fit;

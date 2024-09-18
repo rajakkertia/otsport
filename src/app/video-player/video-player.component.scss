@@ -1,0 +1,10 @@
+/* src/app/video-player/video-player.component.scss */
+
+.video-container {
+    @apply relative w-full;
+  }
+  
+  .video-element {
+  @apply w-full h-full object-cover filter brightness-75 pointer-events-none;
+  }
+  

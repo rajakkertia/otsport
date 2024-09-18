@@ -1,3 +1,7 @@
+<header>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</header>
+
 <div class="header">
     for players
 </div>
@@ -23,14 +27,14 @@
 <div class="maincontainer">
     <div>
         <div class="menu">
-            <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button>
+            <!-- <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button> -->
             <button (click)="scrollToElement(ourservices, 'ourservices')">Services</button>
             <button (click)="scrollToElement(players, 'players')">Players</button>
             <!-- <button (click)="scrollToElement(projects, 'projects')">Our Projects</button> -->
         </div>
     </div>
     <div class="pages">
-        <div #aboutus><app-about-us></app-about-us></div>
+        <!-- <div #aboutus><app-about-us></app-about-us></div> -->
         <div #ourservices><app-our-services></app-our-services></div>
         <div #players><app-player-shell></app-player-shell></div>
         <!-- <div #partners><app-partners></app-partners></div> -->

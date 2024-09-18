@@ -38,9 +38,9 @@ export class ForagenciesComponent implements OnInit {
 
   }
 
-  aboutUs() {
-    this.router.navigate(['about-us'], { relativeTo: this.route });
-  }
+  // aboutUs() {
+  //   this.router.navigate(['about-us'], { relativeTo: this.route });
+  // }
   partners() {
     this.router.navigate(['partners'], { relativeTo: this.route });
   }

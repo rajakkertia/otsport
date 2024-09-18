@@ -11,9 +11,12 @@ export class PlayersComponent implements OnInit {
   @Input() selectedFootballer: any;
   @Output() selectFootballer = new EventEmitter<any>();
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
+    this.selectedFootballer = this.footballers[0]
+
   }
 
 }

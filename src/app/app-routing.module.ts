@@ -11,6 +11,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerShellComponent } from './player-shell/player-shell.component';
 import { PartnerInfoComponent } from './partner-info/partner-info.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -23,13 +24,16 @@ const routes: Routes = [
   { path: 'our-services', component: OurServicesComponent},
   { path: 'players', component: PlayerShellComponent},
   { path: 'partner/:id', component: PartnerInfoComponent},
+  { path: 'video', component: VideoPlayerComponent},
+
+  
 
   {
     path: 'for-clubs',
     component: ForclubsComponent,
     children: [
       { path: '', component: AboutUsComponent },
-      { path: 'about-us', component: AboutUsComponent },
+      // { path: 'about-us', component: AboutUsComponent },
       { path: 'partners', component: PartnersComponent },
       { path: 'our-projects', component: OurProjectsComponent},
     ]

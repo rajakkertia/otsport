@@ -26,6 +26,7 @@ import { PlayerShellComponent } from './player-shell/player-shell.component';
 import { PartnerInfoComponent } from './partner-info/partner-info.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PlayerShellComponent,
     PartnerInfoComponent,
     ImageCarouselComponent,
+    VideoPlayerComponent,
     
 
   ],

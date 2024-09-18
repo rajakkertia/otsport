@@ -14,9 +14,10 @@ export class PlayerShellComponent implements OnInit {
 
   ngOnInit(): void {
     this._http.get(
-      'http://admin.otsportmanagement.com/getPlayersData'
+      'https://admin.otsportmanagement.com/getPlayersData'
     ).subscribe((res)=>{
       this.footballers = res;
+      this.selectedFootballer = this.footballers[0]
     });
 
   }

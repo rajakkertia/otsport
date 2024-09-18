@@ -13,7 +13,7 @@ export class PartnersComponent implements OnInit {
   constructor(private _http:HttpClient) { }
 
   ngOnInit(): void {
-    this._http.get('http://admin.otsportmanagement.com/getPartnersData').subscribe((res)=>{
+    this._http.get('https://admin.otsportmanagement.com/getPartnersData').subscribe((res)=>{
       this.partners = res;
     })
   }

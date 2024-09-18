@@ -1,10 +1,23 @@
-<div>
+<!-- <div>
   <ul class="flex">
-    <li *ngFor="let footballer of footballers" (click)="selectFootballer.emit(footballer)" class="px-3 flex flex-col cursor-pointer"
-      [ngClass]="{ 'selected': footballer === selectedFootballer }">
-    <img class="logo" src="{{footballer.logo}}">
-    <div class="text-xl font-medium">{{ footballer.name }} {{footballer.surname}}</div>
-    <div class="font-medium text-[#848484]">{{ footballer.position }}</div>
+    <li *ngFor="let footballer of footballers" (click)="selectFootballer.emit(footballer)"
+      class="px-3 flex flex-col cursor-pointer" [ngClass]="{ 'selected': footballer === selectedFootballer }">
+      <img class="logo" src="{{footballer.logo}}">
+      <div class="text-xl font-medium">{{ footballer.name }} {{footballer.surname}}</div>
+      <div class="font-medium text-[#848484]">{{ footballer.position }}</div>
     </li>
   </ul>
+</div> -->
+
+
+<div class="flex gap-1 hover:cursor-pointer">
+<div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow opacity-70" 
+  *ngFor="let player of footballers" (click)="selectFootballer.emit(player)"
+  [ngClass]="{ 'selected': player === selectedFootballer }">
+  <img class="w-full h-48 object-cover" [src]="player.logo" alt="{{ player.name }} {{ player.surname }}">
+  <div class="p-4">
+    <h2 class="text-xl font-semibold">{{ player.name }} {{ player.surname }}</h2>
+    <p class="text-gray-600">{{ player.position }}</p>
+  </div>
+</div>
 </div>
