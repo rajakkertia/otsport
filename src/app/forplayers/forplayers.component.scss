@@ -45,3 +45,64 @@
     scrollbar-width: none; /* Firefox */
   }
   
+  
+  @keyframes pulse {
+    0% {
+      transform: translateY(-50%) scale(1); /* Centering vertically */
+    }
+    50% {
+      transform: translateY(-50%) scale(1.2); /* Pulse effect */
+    }
+    100% {
+      transform: translateY(-50%) scale(1); /* Reset to original size */
+    }
+  }
+  
+  .floating-btn {
+    position: fixed;
+    top: 50%; /* Vertically centered */
+    right: 20px; /* 20px from the right side of the page */
+    transform: translateY(-50%); /* Perfectly vertically center the button */
+    background-color: #28a745; /* Green background */
+    color: white; /* White icon */
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: pulse 2s infinite; /* Pulse effect */
+  }
+  
+  .floating-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+
+  /* Tooltip styles */
+.floating-btn::after {
+  content: "Schedule a Meeting"; /* Tooltip text */
+  position: absolute;
+  top: 50%;
+  right: 110%; /* Positioning the tooltip to the left of the button */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+  white-space: nowrap; /* Ensure text stays on one line */
+  font-size: 14px;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.floating-btn:hover::after {
+  opacity: 1; /* Show tooltip on hover */
+  visibility: visible; /* Make tooltip visible */
+}
+  
+  
+  

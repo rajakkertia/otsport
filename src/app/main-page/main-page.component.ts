@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  showCalendly = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleCalendly(){
+    this.showCalendly = !this.showCalendly
   }
 
 }

@@ -5,17 +5,26 @@
     <div class="video">
       <app-video-player></app-video-player>
     </div>
+    <button (click)="toggleCalendly()">
+      {{ showCalendly ? 'Hide Calendly' : 'Show Calendly' }}
+    </button>
     <div class="pages">
-      <a [routerLink]="['/for-clubs']" class="menuItem for-clubs">FOR CLUBS 
+      <a [routerLink]="['/for-clubs']" class="menuItem for-clubs">FOR CLUBS
         <img class="icon" src="../../assets/aicon.svg">
       </a>
-      <a [routerLink]="['/for-players']" class="menuItem for-players">FOR PLAYERS 
+      <a [routerLink]="['/for-players']" class="menuItem for-players">FOR PLAYERS
         <img class="icon" src="../../assets/aicon.svg">
       </a>
-      <a [routerLink]="['/for-agencies']" class="menuItem for-agencies">FOR AGENCIES 
+      <a [routerLink]="['/for-agencies']" class="menuItem for-agencies">FOR AGENCIES
         <img class="icon" src="../../assets/aicon.svg">
       </a>
     </div>
     <img class="circle-bottom-md" src="../../assets/circle-bottom-md.svg" alt="">
   </div>
+
+ <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sanagved/30min'});return false;">Schedule time with me</a>
+<!-- Calendly link widget end -->
 </div>
