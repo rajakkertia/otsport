@@ -96,79 +96,69 @@
 
 <!-- <div class=" bg-[#19002D] h-[calc(100vh-152px)] flex flex-col items-center p-3" > -->
 
-<div class="flex flex-col items-center h-[calc(100vh-152px)] bg-[#19002D] text-white py-10 px-2"
+    <div class="flex flex-col items-center justify-center h-[calc(100vh-152px)] bg-[#19002D] text-white py-10 px-2"
     *ngIf="id == 1 || 5 || 6">
-        <!-- Header Row for Contact Us and Reserve a Call -->
+    <!-- Center the Contact Us header inside the form section -->
+    <h1 class="text-white opacity-75 mb-8">
+        {{serviceName | translate}}
+    </h1>
 
-        <!-- Center the Contact Us header inside the form section -->
-        <h1 class="text-white opacity-75">
-            {{serviceName | translate}}
-        </h1>
+    <!-- Contact Form -->
+    <div class="w-full md:w-2/3 lg:w-1/2 mx-auto">
+        <form (submit)="sendVideoNutritionTraining()"
+            class="bg-white rounded-lg shadow-lg p-6 text-black space-y-6">
+            <div>
+                <label for="fullName" class="block text-sm font-medium text-gray-700">{{'FULL_NAME' |
+                    translate}}</label>
+                <input type="text" id="fullName" name="fullName" [(ngModel)]="fullName"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
+                    required>
+            </div>
 
+            <div>
+                <label for="dob" class="block text-sm font-medium text-gray-700">{{'DOB'|translate}}</label>
+                <input type="date" id="dob" name="dob" [(ngModel)]="dob"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
+                    required>
+            </div>
 
+            <div>
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700">{{'PHONE' |
+                    translate}}</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                    required>
+            </div>
 
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">{{'EMAIL' |
+                    translate}}</label>
+                <input type="email" id="email" name="email" [(ngModel)]="email"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                    required>
+            </div>
 
-        <!-- Contact Form (2/3 of the space) -->
-        <div class="w-1/2 lg:col-span-2">
-            <!-- Centering the Contact Us header within the form -->
+            <div>
+                <label for="club" class="block text-sm font-medium text-gray-700">{{'FOOTBALL_CLUB' |
+                    translate}}</label>
+                <input type="text" id="club" name="club" [(ngModel)]="footballClub"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                    required>
+            </div>
 
-            <form (submit)="sendVideoNutritionTraining()"
-                class="bg-white rounded-lg shadow-lg p-6 text-black space-y-6">
-                <div>
-                    <label for="fullName" class="block text-sm font-medium text-gray-700">{{'FULL_NAME' |
-                        translate}}</label>
-                    <input type="text" id="fullName" name="fullName" [(ngModel)]="fullName"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
-                        required>
-                </div>
+            <div>
+                <label for="uteam" class="block text-sm font-medium text-gray-700">{{'U_TEAM' |
+                    translate}}</label>
+                <input type="text" id="uteam" name="uteam" [(ngModel)]="uTeams"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                    required>
+            </div>
 
-                <div>
-                    <label for="dob" class="block text-sm font-medium text-gray-700">{{'DOB'|translate}}</label>
-                    <input type="date" id="dob" name="dob" [(ngModel)]="dob"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
-                        required>
-                </div>
-
-                <div>
-                    <label for="phoneNumber" class="block text-sm font-medium text-gray-700">{{'PHONE' |
-                        translate}}</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
-                        required>
-                </div>
-
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">{{'EMAIL' |
-                        translate}}</label>
-                    <input type="email" id="email" name="email" [(ngModel)]="email"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
-                        required>
-                </div>
-
-                <div>
-                    <label for="club" class="block text-sm font-medium text-gray-700">{{'FOOTBALL_CLUB' |
-                        translate}}</label>
-                    <input type="text" id="club" name="club" [(ngModel)]="footballClub"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
-                        required>
-                </div>
-
-                <div>
-                    <label for="uteam" class="block text-sm font-medium text-gray-700">{{'U_TEAM' |
-                        translate}}</label>
-                    <input type="text" id="uteam" name="uteam" [(ngModel)]="uTeams"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
-                        required>
-                </div>
-
-
-
-                <button type="submit" class="w-full bg-[#4932EB] text-white py-2 rounded-lg hover:bg-[#3E7FFF]">
-                    {{'SUBMIT' | translate}}
-                </button>
-            </form>
-        </div>
-
+            <button type="submit" class="w-full bg-[#4932EB] text-white py-2 rounded-lg hover:bg-[#3E7FFF]">
+                {{'SUBMIT' | translate}}
+            </button>
+        </form>
+    </div>
 </div>
 
 <!-- </div> -->
