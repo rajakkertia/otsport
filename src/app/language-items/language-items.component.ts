@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-items',
@@ -8,13 +9,30 @@ import { Component, OnInit } from '@angular/core';
 export class LanguageItemsComponent implements OnInit {
   languagesToggled = false;
 
-  langauages = ["UK","FR", "DE", "IT", "GE", "ES"];
+  selectedLanguage:string;
 
-  constructor() {}
+  langauages = ["EN","GE"];
 
-  ngOnInit(): void {}
+  constructor( private translate: TranslateService) {
+    this.selectedLanguage = localStorage.getItem('language') || 'EN';
+  }
+
+  ngOnInit(): void {
+    this.translate.addLangs(['EN', 'GE']);
+
+    this.translate.setDefaultLang('EN');
+    this.translate.use(this.selectedLanguage);
+
+  }
 
   toggleLangaugeList() {
     this.languagesToggled = !this.languagesToggled;
+  }
+
+  switchLanguage(lang: string) {
+    this.selectedLanguage = lang;
+    localStorage.setItem('language', lang);
+    this.translate.use(lang);
+
   }
 }

@@ -13,17 +13,15 @@ export class PlayerShellComponent implements OnInit {
   constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {
-    this._http.get(
-      'https://admin.otsportmanagement.com/getPlayersData'
-    ).subscribe((res)=>{
-      this.footballers = res;
-      this.selectedFootballer = this.footballers[0]
-    });
-
+    //https://admin.otsportmanagement.com/getPlayersData
+    this._http.get("/assets/playerData.json").subscribe((res) => {
+        this.footballers = res;
+        this.selectedFootballer = this.footballers[0];
+      });
   }
 
   onSelectFootballer(footballer: any) {
-    console.log(footballer)
+    console.log(footballer);
     this.selectedFootballer = footballer;
   }
 

@@ -1,7 +1,7 @@
 <div class="wrapper" *ngIf="partner">
     <img class="logo" src="{{partner.logo}}">
-    <span class="text">{{partner.description}}</span>
+    <span class="text">{{partner!.description! | translate}}</span>
     <button class="btn" (click)="seeMore()">
-        SEE MORE
+        {{'SEE_MORE' | translate}}
       </button>
 </div>

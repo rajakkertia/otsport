@@ -1,18 +1,19 @@
   <div>
-    <button *ngIf="selectedFootballer" (click)="goBack.emit()">Back</button>
+    <!-- <button *ngIf="selectedFootballer" (click)="goBack.emit()">Back</button> -->
     <div *ngIf="!selectedFootballer; else playerInfo">
-      <p>Select a player from the list</p>
+      <p></p>
     </div>
     <ng-template #playerInfo>
       <img src="{{ selectedFootballer.avatarUrl }}">
-      <div class="text-xl font-medium">{{ selectedFootballer.name }} {{selectedFootballer.surname}}</div>
+      <div class="text-xl font-medium">{{ selectedFootballer.name+selectedFootballer.surname | translate}}</div>
       <div class="font-medium text-[#848484]">{{ selectedFootballer.position }}</div>
-      <div class="">{{selectedFootballer.description}}</div>
+      <div [innerHTML]="selectedFootballer.description | translate"></div>
 
     <!-- <div class="images" *ngFor="let item of imageArray">
     <img src="{{item}}"/>
     </div> -->
 
     <app-image-carousel [imageArray]="imageArray"></app-image-carousel>
+    
     </ng-template>
   </div>

@@ -27,6 +27,14 @@ import { PartnerInfoComponent } from './partner-info/partner-info.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -51,6 +59,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     PartnerInfoComponent,
     ImageCarouselComponent,
     VideoPlayerComponent,
+    ContactUsComponent,
     
 
   ],
@@ -61,7 +70,14 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [],

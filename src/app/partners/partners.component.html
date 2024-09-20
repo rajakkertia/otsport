@@ -4,9 +4,9 @@
 
 <div class="wrapper">
     <div class="leftside">
-        <span class="title">our partners</span>
+        <span class="title">{{'PARTNERS' | translate}}</span>
         <div class="bottomside">
-            <span class="slogan">we are life coaches</span>
+            <!-- <span class="slogan">we are life coaches</span> -->
             <span class="text"> </span>
         </div>
     </div>
@@ -14,7 +14,7 @@
         <div class="partners" *ngFor="let partner of partners">
             <div class="partner"><app-partner [partner]="partner"></app-partner></div>           
         </div>
-        <div class="seemore">Click to see all Partners</div>
+        <!-- <div class="seemore">Click to see all Partners</div> -->
     </div>
 
 </div>

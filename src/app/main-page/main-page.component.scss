@@ -1,5 +1,5 @@
 .wrapper {
-  @apply bg-[#19002D] flex justify-center overflow-hidden w-full h-full mx-auto px-0 md:items-center;
+  @apply bg-[#19002D] flex justify-center w-full h-full mx-auto px-0 sm:overflow-hidden  md:items-center;
 
   .container {
     @apply flex justify-center relative w-full;
@@ -29,10 +29,10 @@
     }
 
     .pages {
-      @apply absolute flex flex-col self-end p-2 mt-5 mb-10 z-[2] w-[75%] bg-[#19002D] text-xl text-white border border-[#ffffff42] font-bold sm:justify-center md:flex-row md:justify-between md:bg-white md:text-[#19002D] md:w-[98%] lg:w-[70%] xl:w-[56%];
+      @apply absolute flex flex-col self-end p-2 mt-5 z-[2] w-[75%] bg-[#19002D] text-base text-white border border-[#ffffff42] font-bold sm:text-xl sm:mb-10 sm:justify-center md:flex-row md:justify-between md:bg-white md:opacity-75 md:text-[#19002D] md:w-[98%] lg:w-[70%] xl:w-[56%];
 
       .menuItem {
-        @apply flex justify-between items-center py-3 border-b border-[#ffffff42];
+        @apply flex justify-between items-center py-2 border-b border-[#ffffff42] sm:py-3;
 
         &:hover {
           @apply text-[#4932EB];
@@ -42,17 +42,17 @@
           @apply text-[#3E7FFF];
         }
 
-        &.for-agencies {
-          @apply border-0;
-
-          &:hover {
+        &.for-agencies:hover {
             @apply text-[#741FE2];
           }
-        }
+        
+        &.about-us{
+           @apply border-0;
+        }  
       }
 
       .icon {
-        @apply w-12 h-12 md:w-9 md:h-9;
+        @apply w-9 h-9 sm:w-12 sm:h-12 md:w-9 md:h-9;
       }
     }
     

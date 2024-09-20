@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="leftside">
-        <span class="title">our services</span>
+        <span class="title">{{'OUR_SERVICES' | translate}}</span>
         <div class="leftText"></div>
 
             <img class="video" src="../../assets/ourvisionsm.svg">
@@ -12,10 +12,13 @@
         <div class="services">
             <ul>
                 <li *ngFor="let item of serviceList">
-                    <div>{{item}}</div>
+                    <div>{{item | translate}}</div>
                 </li>
             </ul>
         </div>
-        <div class="contactUs">Contact Us ></div>
+
+        <a [routerLink]="['/contact-us']" class="contactUs">{{'CONTACT_US' | translate}}</a>
+        <!-- <div class="">Contact Us ></div>` -->
+        
     </div>
 </div>

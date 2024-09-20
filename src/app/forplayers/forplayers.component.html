@@ -3,39 +3,19 @@
 </header>
 
 <div class="header">
-    for players
+    {{'FOR_PLAYERS' | translate}}
 </div>
-<!-- 
-<div class="maincontainer">
-    <div [ngClass]="menuClass">
-        <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button>
-        <button (click)="scrollToElement(partners, 'partners')">Partners</button>
-        <button (click)="scrollToElement(projects, 'projects')">Our Projects</button>
-        <button (click)="aboutUs()"></button>
-    <button (click)="partners()">Partners</button>
-    <button (click)="projects()">Our Projects</button>
-    </div>
-    <div class="wrapper">
-        <div class="container">
-            <div #aboutus><app-about-us></app-about-us></div>
-            <div #partners><app-partners></app-partners></div>
-            <div #projects><app-our-projects></app-our-projects></div>
-        </div>
-    </div>
-</div> -->
 
 <div class="maincontainer">
     <div>
         <div class="menu">
-            <!-- <button (click)="scrollToElement(aboutus, 'aboutus')">About Us</button> -->
-            <button (click)="scrollToElement(ourservices, 'ourservices')">Services</button>
-            <button (click)="scrollToElement(players, 'players')">Players</button>
-            <!-- <button (click)="scrollToElement(projects, 'projects')">Our Projects</button> -->
+            <button (click)="scrollToElement(ourservices, 'ourservices')">{{'SERVICES' | translate}}</button>
+            <button (click)="scrollToElement(players, 'players')">{{'PLAYERS' | translate}}</button>
         </div>
     </div>
     <div class="pages">
         <!-- Calendly link widget begin -->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         <a class="floating-btn" href=""
             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sanagved/30min?background_color=19002d&text_color=ffffff'});return false;">
@@ -43,7 +23,14 @@
                 <path
                     d="M12 0c-6.627 0-12 5.373-12 12 0 6.627 5.373 12 12 12 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm1 19h-2v-6h-6v-2h6v-6h2v6h6v2h-6v6z" />
             </svg>
-        </a>
+        </a> -->
+        <!-- Calendly inline widget begin -->
+        <!-- <div class="calendly-inline-widget"
+            data-url="https://calendly.com/otsportmanagement-info/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+            style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+        <!-- Calendly inline widget end -->
+
 
         <!-- Calendly link widget end -->
         <!-- Calendly link widget end -->

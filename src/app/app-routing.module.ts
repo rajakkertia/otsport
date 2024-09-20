@@ -12,6 +12,7 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerShellComponent } from './player-shell/player-shell.component';
 import { PartnerInfoComponent } from './partner-info/partner-info.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'players', component: PlayerShellComponent},
   { path: 'partner/:id', component: PartnerInfoComponent},
   { path: 'video', component: VideoPlayerComponent},
+  { path: 'contact-us', component: ContactUsComponent },
 
   
 

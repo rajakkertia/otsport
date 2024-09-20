@@ -11,11 +11,11 @@
     -webkit-box-orient: vertical;
   }
   .btn {
-    @apply text-white font-bold mt-3;
+    @apply text-black font-bold mt-3;
     transition: transform 0.2s;
 
     &:hover {
-      @apply text-[#4932EB];
+      @apply text-[#A3A9F5];
       -ms-transform: scale(1.15); /* IE 9 */
       -webkit-transform: scale(1.15); /* Safari 3-8 */
       transform: scale(1.15);

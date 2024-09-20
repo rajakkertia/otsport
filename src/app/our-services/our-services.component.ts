@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurServicesComponent implements OnInit {
 
-  serviceList = ["Game Video Analytics", "Career Planning","individual development program","language course","nutrition","physical training","work on transfer"] ;
+  serviceList = ["GAME_VIDEO_ANALYTICS", "CAREER_PLANNING","INDIVIDUAL_DEVELOPMENT_PROGRAM","LANGUAGE_COURSE","NUTRITION","PHYSICAL_TRAINING","WORK_ON_TRANSFER"] ;
 
   constructor() { }
 
