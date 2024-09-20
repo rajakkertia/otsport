@@ -6,7 +6,8 @@
     <ng-template #playerInfo>
       <img src="{{ selectedFootballer.avatarUrl }}">
       <div class="text-xl font-medium">{{ selectedFootballer.name+selectedFootballer.surname | translate}}</div>
-      <div class="font-medium text-[#848484]">{{ selectedFootballer.position }}</div>
+      <!-- <div class="font-medium text-[#848484]">{{ selectedFootballer.position }}</div> -->
+       <br>
       <div [innerHTML]="selectedFootballer.description | translate"></div>
 
     <!-- <div class="images" *ngFor="let item of imageArray">

@@ -3,7 +3,7 @@
     .leftside {
       @apply flex flex-col items-center lg:justify-between lg:border-r lg:border-white lg:w-1/2 lg:px-2;
       .title {
-        @apply text-[#00F5FF] font-medium text-4xl capitalize flex justify-center lg:justify-start lg:text-8xl;
+        @apply text-[#00F5FF] font-medium text-2xl capitalize flex justify-center sm:text-3xl lg:justify-start lg:text-5xl 2xl:text-8xl;
       }
       .leftText{
         @apply text-white
@@ -27,10 +27,10 @@
     .rightside {
       @apply flex flex-col justify-between gap-2 p-3 items-center lg:w-1/2;
      .services{
-        @apply h-4/5 w-4/5;
+        @apply h-4/5 w-full sm:w-4/5;
 
         ul li {
-            @apply flex text-white capitalize font-medium text-4xl py-5 border-b border-[#515151] justify-between px-5;
+            @apply flex text-white capitalize text-sm py-5 border-b border-[#515151] justify-between px-5 sm:font-medium sm:text-base lg:text-lg;
           }
           
           ul li:hover {

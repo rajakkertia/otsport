@@ -1,60 +1,46 @@
 .wrapper {
-  @apply bg-[#19002D] flex justify-center w-full h-full mx-auto px-0 sm:overflow-hidden  md:items-center;
+  @apply bg-[#19002D] flex flex-col justify-between min-h-screen; /* Ensure full screen height */
+}
 
-  .container {
-    @apply flex justify-center relative w-full;
+.container {
+  @apply flex flex-col justify-evenly items-center flex-1 sm:justify-center; /* Make content grow */
+}
 
-    .circle,
-    .circle-md,
-    .circle-bottom-md {
-      @apply hidden absolute;
-    }
+.video {
+  @apply mt-9 w-full h-full object-contain z-[1] bg-opacity-30 sm:h-4/5 lg:mt-4;
+}
 
-    .circle {
-      @apply w-full -top-28 sm:w-[80%];
-    }
+.pages {
+  @apply flex flex-col p-2 mt-5 w-[75%] bg-[#19002D] text-base text-white border border-[#ffffff42] font-bold sm:text-base sm:justify-center md:flex-row md:justify-between md:bg-white md:opacity-75 md:text-[#19002D] md:w-[98%] lg:text-xl lg:w-[70%] xl:w-[56%];
+}
 
-    @screen md {
-      .circle-md {
-        @apply block h-3/5 -top-3/4 lg:-top-1/3 lg:h-1/2 lg:w-3/5 xl:w-[55%] xl:left-[28%];
-      }
+.menuItem {
+  @apply flex justify-between items-center py-2 border-b border-[#ffffff42] sm:py-3;
 
-      .circle-bottom-md {
-        @apply block w-full h-3/5 -bottom-3/4 lg:w-[90%] lg:-bottom-1/4 xl:w-[72%];
-      }
-    }
+  &:hover {
+    @apply text-[#4932EB];
+  }
 
-    .video {
-      @apply mt-9 w-full h-full object-contain z-[1] bg-opacity-30 sm:h-4/5 lg:mt-4;
-    }
+  &.for-players:hover {
+    @apply text-[#3E7FFF];
+  }
 
-    .pages {
-      @apply absolute flex flex-col self-end p-2 mt-5 z-[2] w-[75%] bg-[#19002D] text-base text-white border border-[#ffffff42] font-bold sm:text-xl sm:mb-10 sm:justify-center md:flex-row md:justify-between md:bg-white md:opacity-75 md:text-[#19002D] md:w-[98%] lg:w-[70%] xl:w-[56%];
+  &.for-agencies:hover {
+    @apply text-[#741FE2];
+  }
+  
+  &.about-us {
+    @apply border-0;
+  }
+}
 
-      .menuItem {
-        @apply flex justify-between items-center py-2 border-b border-[#ffffff42] sm:py-3;
+.icon {
+  @apply w-9 h-9 sm:w-12 sm:h-12 md:w-9 md:h-9;
+}
 
-        &:hover {
-          @apply text-[#4932EB];
-        }
-
-        &.for-players:hover {
-          @apply text-[#3E7FFF];
-        }
-
-        &.for-agencies:hover {
-            @apply text-[#741FE2];
-          }
-        
-        &.about-us{
-           @apply border-0;
-        }  
-      }
-
-      .icon {
-        @apply w-9 h-9 sm:w-12 sm:h-12 md:w-9 md:h-9;
-      }
-    }
-    
+/* Ensure responsive layout */
+@screen md {
+  .pages {
+    @apply w-[75%] md:w-[98%];
   }
 }

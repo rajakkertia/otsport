@@ -1,5 +1,5 @@
 .app-container {
-  @apply flex flex-col h-screen;
+  @apply flex flex-col min-h-screen; /* Ensure full viewport height */
 }
 
 header {
@@ -7,9 +7,9 @@ header {
 }
 
 main {
-  @apply h-[calc(100vh-152px)] z-0;
+  @apply flex-1 z-0; /* Make main grow to fill the remaining space */
 }
 
 footer {
-  @apply h-24 w-full;
+  @apply h-24 w-full; /* Footer stays at the bottom */
 }
