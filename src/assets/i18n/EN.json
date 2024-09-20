@@ -37,6 +37,11 @@
   "SUBMIT": "Submit",
   "SUBJECT": "Subject",
   "MESSAGE": "Message",
-  "RESERVE_CALL":"Reserve a Call"
+  "RESERVE_CALL":"Reserve a Call",
+  "ALIKA_GETIASHVILI":"ალიკა გეთიაშვილი",
+  "ALIKA_GETIASHVILI_DESCRIPTION":"<p>About the Player:</p> <p>Name: Alika Getiashvili</p> <p>Date of Birth: 07.01.2009</p> <p>Football Club: Dinamo Tbilisi</p> <p>Position: Central Defender</p> <p>Height: 185 cm</p> <br> <p>We are proud to collaborate with Alika Getiashvili. At the same time, we are fully aware of the responsibility we have undertaken towards him and his family, and we are actively involved in his mental and physical development.</p> <br> <p>Alika is a left central defender for FC Dinamo Tbilisi's U-16 team and the Georgian U-17 national team. He stands out with his impressive physical attributes, technical skills, and football intelligence. He excels in positioning and winning duels, both through his physical abilities and his ability to read the game and make quick, accurate decisions.</p> <br> <p>His composure and technique on the ball allow him to confidently initiate attacks, make passes between the opponent’s lines, and quickly change the direction and pace of play.</p> <br> <p>We are confident that through hard work and humility, we will achieve all our shared goals. </p> <br> <p>Best of luck, Geti!</p>",
+  "FOOTBALL_CLUB":"Team",
+  "U_TEAM": "U-Teams"
+
 
 }

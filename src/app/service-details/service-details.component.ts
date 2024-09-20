@@ -22,6 +22,10 @@ export class ServiceDetailsComponent implements OnInit {
   beginDate: string = ''; // Date format for Begin Date
   englishLevel: string = '';
 
+
+  footballClub = '';
+  uTeams = '';
+
   constructor( private _activatedRoute: ActivatedRoute, private _emailService: EmailService) { 
     this._activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
@@ -29,7 +33,15 @@ export class ServiceDetailsComponent implements OnInit {
         this.serviceName = "LANGUAGE_COURSE";
         this.description =  "LANGUAGE_COURSE_DESCRIPTION";
         this.teacher =  "LANGUAGE_COURSE_TEACHER";
-
+      }
+      if(this.id == 1){
+        this.serviceName = "GAME_VIDEO_ANALYTICS";
+      }
+      if(this.id == 5){
+        this.serviceName = "NUTRITION";
+      }
+      if(this.id == 6){
+        this.serviceName = "PHYSICAL_TRAINING";
       }
     });
 
@@ -39,7 +51,7 @@ export class ServiceDetailsComponent implements OnInit {
    
   }
 
-  sendForm() {
+  sendEglishCourse() {
     const formData = {
       full_name: this.fullName,
       dob: this.dob,
@@ -60,6 +72,12 @@ export class ServiceDetailsComponent implements OnInit {
     );
   }
 
+  sendVideoNutritionTraining(){
+
+  }
+
+
+
   // Method to clear form after submission
   clearForm() {
     this.fullName = '';
@@ -69,6 +87,8 @@ export class ServiceDetailsComponent implements OnInit {
     this.groupType = 'individual';
     this.beginDate = '';
     this.englishLevel = '';
+    this.footballClub = '';
+    this.uTeams = '';
   }
 
 }

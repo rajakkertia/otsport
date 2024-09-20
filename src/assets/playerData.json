@@ -9,5 +9,16 @@
     "images": "../../assets/pictures/players/t.odikadze/1.jpg ../../assets/pictures/players/t.odikadze/2.jpg ../../assets/pictures/players/t.odikadze/3.jpg ../../assets/pictures/players/t.odikadze/4.jpg ../../assets/pictures/players/t.odikadze/5.jpg",
     "position": "RW, LW ",
     "description": "TEMUR_ODIKADZE_DESCRIPTION"
+  },
+  {
+    "_id": "32483t57d5b7b55ax1568da9",
+    "type": "players",
+    "language": "en",
+    "name": "ALIKA_",
+    "surname": "GETIASHVILI",
+    "logo": "../../assets/pictures/No_avatar.png",
+    "images": "../../assets/pictures/players/a.getiashvili/1.jpeg ../../assets/pictures/players/a.getiashvili/2.jpeg ../../assets/pictures/players/a.getiashvili/4.jpeg ../../assets/pictures/players/a.getiashvili/5.jpeg",
+    "position": "CD",
+    "description": "ALIKA_GETIASHVILI_DESCRIPTION"
   }
 ]
