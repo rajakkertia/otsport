@@ -3,7 +3,7 @@
 }
 
 .maincontainer {
-  @apply flex justify-center h-[calc(100vh-180px)] overflow-scroll lg:justify-between;
+  @apply flex justify-center h-[calc(100vh-180px)] lg:justify-between;
 
   .menu{
     @apply hidden lg:w-1/6 lg:fixed lg:flex lg:flex-col;

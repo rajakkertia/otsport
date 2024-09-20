@@ -13,6 +13,7 @@ import { PlayerShellComponent } from './player-shell/player-shell.component';
 import { PartnerInfoComponent } from './partner-info/partner-info.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'partners', component: PartnersComponent},
   { path: 'our-projects', component: OurProjectsComponent},
   { path: 'our-services', component: OurServicesComponent},
+  { path: 'service/:id', component: ServiceDetailsComponent},
   { path: 'players', component: PlayerShellComponent},
   { path: 'partner/:id', component: PartnerInfoComponent},
   { path: 'video', component: VideoPlayerComponent},

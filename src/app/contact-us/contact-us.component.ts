@@ -1,29 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailService } from './email.service';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent {
-
   fullName = '';
   email = '';
   subject = '';
   message = '';
 
-  onSubmit() {
-    const formData = {
-      fullName: this.fullName,
-      email: this.email,
+  constructor(private _emailService: EmailService) {}
+
+  sendEmail() {
+    const templateParams = {
+      from_full_name: this.fullName,
+      reply_to: this.email,
       subject: this.subject,
       message: this.message,
     };
-
-    // Simulate sending form data to a server or API
-    console.log('Sending email to info@mysite.com with the following data:', formData);
-
-    // You can integrate an email service like SendGrid or a backend API to send emails
+    this._emailService.sendEmailContactUs(templateParams).then(
+      (response) => {
+        this.clearForm();
+      },
+      (error) => {
+        alert('Failed to send email.');
+      }
+    );
   }
 
+  clearForm() {
+    this.fullName = '';
+    this.email = '';
+    this.subject = '';
+    this.message = '';
+  }
 }

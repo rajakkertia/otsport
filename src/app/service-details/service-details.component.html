@@ -1,0 +1,94 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="containerleft">
+            <h1 class="text-white opacity-75">
+                {{serviceName | translate}}
+            </h1>
+
+            <div class="description text-white opacity-75" [innerHTML]="description | translate"> </div>
+
+            <h1 class=" text-white opacity-75">{{'ABOUT_TEACHER' | translate}}</h1>
+            <div class="description text-white opacity-75" [innerHTML]="teacher | translate"> </div>
+
+        </div>
+        <div class="containerright">
+            <div class="h-[calc(100vh-152px)] bg-[#19002D] text-white py-10 px-2 w-full">
+                <div class="mx-auto gap-3 flex flex-col items-center">
+                    <!-- Contact Us Header centered and on top of form -->
+                    <h1 class="text-4xl font-bold text-center mb-8">{{'CONTACT_US_COURSES'| translate}}</h1>
+
+                    <!-- Centered Form with 80% width of containerright -->
+                    <div class="w-full flex justify-center">
+                        <form (submit)="sendForm()"
+                            class="bg-white rounded-lg shadow-lg p-6 text-black space-y-6 w-[80%]">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium text-gray-700">{{'FULL_NAME' |
+                                    translate}}</label>
+                                <input type="text" id="fullName" name="fullName" [(ngModel)]="fullName"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="dob"
+                                    class="block text-sm font-medium text-gray-700">{{'DOB'|translate}}</label>
+                                <input type="date" id="dob" name="dob" [(ngModel)]="dob"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="phoneNumber" class="block text-sm font-medium text-gray-700">{{'PHONE' |
+                                    translate}}</label>
+                                <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">{{'EMAIL' | translate}}</label>
+                                <input type="email" id="email" name="email" [(ngModel)]="email"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="groupType"
+                                    class="block text-sm font-medium text-gray-700">{{'GROUP'|translate}}</label>
+                                <select id="groupType" name="groupType" [(ngModel)]="groupType"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#741FE2] focus:border-[#741FE2]">
+                                    <option value="individual">{{'INDIVIDUAL' |translate }}</option>
+                                    <option value="go3">{{'GROUP_OF_THREE' | translate}}</option>
+                                    <option value="go5">{{'GROUP_OF_FIVE' | translate}}</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="beginDate" class="block text-sm font-medium text-gray-700">{{'BEGIN_DATE' |
+                                    translate}}</label>
+                                <input type="date" id="beginDate" name="beginDate" [(ngModel)]="beginDate"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4932EB] focus:border-[#4932EB]"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="englishLevel"
+                                    class="block text-sm font-medium text-gray-700">{{'ENGLISH_LEVEL'|
+                                    translate}}</label>
+                                <input type="text" id="englishLevel" name="englishLevel" [(ngModel)]="englishLevel"
+                                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3E7FFF] focus:border-[#3E7FFF]"
+                                    required>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-[#4932EB] text-white py-2 rounded-lg hover:bg-[#3E7FFF]">
+                                {{'SUBMIT' | translate}}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

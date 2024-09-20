@@ -30,6 +30,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -60,6 +61,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImageCarouselComponent,
     VideoPlayerComponent,
     ContactUsComponent,
+    ServiceDetailsComponent,
     
 
   ],

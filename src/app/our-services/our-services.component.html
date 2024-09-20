@@ -11,8 +11,8 @@
     <div class="rightside">
         <div class="services">
             <ul>
-                <li *ngFor="let item of serviceList">
-                    <div>{{item | translate}}</div>
+                <li *ngFor="let item of serviceList; index as i">
+                    <button class="hover:cursor-pointer" (click)="goToDetails(i+1)">{{item | translate}}</button>
                 </li>
             </ul>
         </div>
