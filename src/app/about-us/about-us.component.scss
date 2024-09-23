@@ -30,10 +30,11 @@
       }
     }
     .containerright {
-      @apply w-[80%] mt-4 flex flex-col justify-between text-white;
+      @apply w-[80%] mt-4 mb-3 flex flex-col justify-between text-white;
 
       img {
-        @apply w-fit h-fit;
+        // @apply w-full h-fit; 
+        @apply w-full
       }
       .text {
         @apply mt-6;

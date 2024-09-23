@@ -6,11 +6,10 @@
         <div class="containerleft">
 
             <h1>
-                {{partnerInfo.name}}
+                {{partnerInfo?.name}}
             </h1>
 
-            <div class="description">
-                {{partnerInfo.description | translate}}
+            <div class="description" [innerHTML]="partnerInfo?.description | translate">
             </div>
 
             <div class="video">

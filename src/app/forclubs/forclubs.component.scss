@@ -1,39 +1,37 @@
 .header {
-  @apply flex justify-center text-xl text-[#19002D] uppercase font-bold;
+  @apply flex justify-center text-lg md:text-xl text-[#19002D] uppercase font-bold;
 }
 
 .maincontainer {
-  @apply flex justify-center h-[calc(100vh-180px)] lg:justify-between;
+  @apply flex flex-col lg:flex-row justify-center h-[calc(100vh-180px)] lg:justify-between;
 
-  .menu{
-    @apply hidden lg:w-1/6 lg:fixed lg:flex lg:flex-col;
-    :hover{
-      @apply text-[#4932EB] font-bold
+  .menu {
+    @apply hidden lg:flex lg:flex-col lg:w-1/6 lg:fixed;
+  }
+
+  .mobile-menu {
+    @apply flex justify-center py-4;
+    .menu-icon {
+      @apply text-2xl cursor-pointer;
+    }
+    .mobile-menu-content {
+      @apply hidden flex-col items-center bg-white;
     }
   }
-  .pages{
-    @apply  mt-1 h-full w-full lg:w-5/6;
+
+  .pages {
+    @apply w-full h-full lg:w-5/6 mt-4 lg:mt-0;
   }
-  
-  .menuPartners {
-    @apply text-white fixed w-1/6 h-full;
+
+  .partners-section {
+    @apply h-full overflow-y-auto px-4;
   }
 }
 
-// .wrapper {
-//   @apply flex flex-col justify-between items-center w-[80%] h-[calc(100vh-152px)] overflow-scroll;
-
-//   .header {
-//     @apply flex justify-center items-center w-[80%] text-xl text-[#19002D] uppercase pb-2 font-bold lg:w-full;
-//   }
-
-//
-//
-//     .router {
-//       @apply border;
-//     }
-//   }
-// }
+.menu button,
+.mobile-menu-content button {
+  @apply text-base lg:text-lg hover:text-[#4932EB] font-bold;
+}
 
 .maincontainer::-webkit-scrollbar {
   display: none;

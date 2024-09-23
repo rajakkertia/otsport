@@ -28,5 +28,14 @@ export class EmailService {
       templateParams
     );
   }
+
+  sendGeneralServices(templateParams: any) {
+    
+    return emailjs.send(
+      'service_zm6lsd6', // Replace with your EmailJS service ID
+      'template_vxc8vrj', // Replace with your EmailJS template ID
+      templateParams
+    );
+  }
 }
 

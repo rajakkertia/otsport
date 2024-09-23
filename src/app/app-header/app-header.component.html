@@ -1,22 +1,22 @@
 <!-- <header class="wrapper"> -->
-  <nav class="navigaion" aria-label="Global"> <!--max-w-7xl-->
-    <div class="logo">
-      <a href="#">
-        <span class="sr-only">OT Sports</span>
-        <img src="../../assets/logo.svg" alt="">
-      </a>
+<nav class="navigaion" aria-label="Global"> <!--max-w-7xl-->
+  <div class="logo">
+    <a href="#">
+      <span class="sr-only">OT Sports</span>
+      <img src="../../assets/logo.svg" alt="">
+    </a>
+  </div>
+  <div class="pageName">{{pageName}}</div>
+  <div class="navitems">
+    <app-language-items></app-language-items>
+    <div (click)="toggleMainMenu()">
+      <img src="../../assets/{{currentIcon}}.svg" class="h-6 w-6 cursor-pointer" fill="none">
     </div>
-    <div class="pageName">{{pageName}}</div>
-    <div class="navitems">
-      <app-language-items></app-language-items>
-      <div (click)="toggleMainMenu()">
-        <img src="../../assets/{{currentIcon}}.svg" class="h-6 w-6 cursor-pointer" fill="none">
-      </div>
-    </div>
-  </nav>
+  </div>
+</nav>
 <!-- </header> -->
 
-  <!-- <ng-template #hamburgerIcon>
+<!-- <ng-template #hamburgerIcon>
     <img src="../../assets/menuOpen.svg" class="h-6 w-6" fill="none">
   </ng-template>
 
@@ -26,11 +26,12 @@
 
 <div *ngIf="menuToggled" [@slideInOut]="menuToggled ? 'visible' : 'hidden'" class="fixed w-full">
   <div class="menuToggle">
-    <a [routerLink]="['/for-clubs']" class="menuItem for-clubs" (click)="toggleMainMenu()">FOR CLUBS <img src="../../assets/aicon.svg"
-        class="mx-4"></a>
-    <a [routerLink]="['/for-players']" class="menuItem for-players" (click)="toggleMainMenu()">FOR PLAYERS <img src="../../assets/aicon.svg"
-        class="mx-4"></a>
-    <a [routerLink]="['/for-agencies']" class="menuItem for-agencies" (click)="toggleMainMenu()">FOR AGENCIES <img src="../../assets/aicon.svg"
-        class="mx-4"></a>
+    <a [routerLink]="['/for-clubs']" class="menuItem for-clubs" (click)="toggleMainMenu()">{{'FOR_CLUBS' | translate}}
+      <img src="../../assets/aicon.svg" class="mx-4"></a>
+    <a [routerLink]="['/for-players']" class="menuItem for-players" (click)="toggleMainMenu()">{{'FOR PLAYERS' |translate}} <img src="../../assets/aicon.svg" class="mx-4"></a>
+    <a [routerLink]="['/for-agencies']" class="menuItem for-agencies" (click)="toggleMainMenu()">{{'FOR AGENCIES' | translate}} <img src="../../assets/aicon.svg" class="mx-4"></a>
+    <a [routerLink]="['/about-us']" class="menuItem about-us">{{'ABOUT_US' | translate}}
+      <img class="mx-4" src="../../assets/aicon.svg">
+    </a>
   </div>
 </div>

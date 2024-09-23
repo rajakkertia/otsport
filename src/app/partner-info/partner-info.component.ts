@@ -31,10 +31,15 @@ export class PartnerInfoComponent implements OnInit {
     //'https://admin.otsportmanagement.com/api/partner/'+this.id
     this._http.get<[IPartner]>('/assets/partnersData.json').subscribe((res) => {
       this.partnerInfo = res.find((partner) => partner._id === this.id);
-      this.images = this.partnerInfo.images.split(';');
-      this.trustedUrl = this._sanitizer.bypassSecurityTrustResourceUrl(
-        this.partnerInfo.youtube
-      );
+      console.log(this.partnerInfo)
+
+      if (this.partnerInfo && this.partnerInfo.images) {
+        this.images = this.partnerInfo.images.split(';');
+      }
+      if (this.partnerInfo && this.partnerInfo.youtube) {
+        this.trustedUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.partnerInfo.youtube);
+      }
+
     });
   }
 

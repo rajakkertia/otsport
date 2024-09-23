@@ -36,10 +36,12 @@
       @apply text-[#3E7FFF];
     }
     &.for-agencies {
-      @apply border-0;
     }
     &.for-agencies:hover {
       @apply text-[#741FE2];
+    }
+    &.about-us {
+      @apply border-0;
     }
   }
 }

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmailService } from '../contact-us/email.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-service-details',
   templateUrl: './service-details.component.html',
-  styleUrls: ['./service-details.component.scss']
+  styleUrls: ['./service-details.component.scss'],
 })
 export class ServiceDetailsComponent implements OnInit {
-
   serviceName: any;
   description: any;
   teacher: any;
@@ -22,33 +22,62 @@ export class ServiceDetailsComponent implements OnInit {
   beginDate: string = ''; // Date format for Begin Date
   englishLevel: string = '';
 
-
   footballClub = '';
   uTeams = '';
 
-  constructor( private _activatedRoute: ActivatedRoute, private _emailService: EmailService) { 
+  footballers: any;
+  selectedFootballer: any;
+
+
+  constructor(
+    private _activatedRoute: ActivatedRoute,
+    private _emailService: EmailService,
+    private _http: HttpClient
+  ) {
     this._activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
-      if(this.id == 4){
-        this.serviceName = "LANGUAGE_COURSE";
-        this.description =  "LANGUAGE_COURSE_DESCRIPTION";
-        this.teacher =  "LANGUAGE_COURSE_TEACHER";
+
+      if (this.id == 1) {
+        this.serviceName = 'GAME_VIDEO_ANALYTICS';
       }
-      if(this.id == 1){
-        this.serviceName = "GAME_VIDEO_ANALYTICS";
+      if (this.id == 2) {
+        this.serviceName = 'CAREER_PLANNING';
+        this.description = 'ONLY_FOR_OUR_PLAYERS';
       }
-      if(this.id == 5){
-        this.serviceName = "NUTRITION";
+      if (this.id == 3) {
+        this.serviceName = 'INDIVIDUAL_DEVELOPMENT_PROGRAM';
+        this.description = 'ONLY_FOR_OUR_PLAYERS';
       }
-      if(this.id == 6){
-        this.serviceName = "PHYSICAL_TRAINING";
+      if (this.id == 4) {
+        this.serviceName = 'LANGUAGE_COURSE';
+        this.description = 'LANGUAGE_COURSE_DESCRIPTION';
+        this.teacher = 'LANGUAGE_COURSE_TEACHER';
+      }
+      if (this.id == 5) {
+        this.serviceName = 'NUTRITION';
+      }
+      if (this.id == 6) {
+        this.serviceName = 'PHYSICAL_TRAINING';
+      }
+      if (this.id == 7) {
+        this.serviceName = 'WORK_ON_TRANSFER';
+        this.description = 'ONLY_FOR_OUR_PLAYERS';
       }
     });
-
   }
 
+
+
   ngOnInit(): void {
-   
+    this._http.get("/assets/playerData.json").subscribe((res) => {
+      this.footballers = res;
+      this.selectedFootballer = this.footballers[0];
+    });
+  }
+
+  onSelectFootballer(footballer: any) {
+    console.log(footballer);
+    this.selectedFootballer = footballer;
   }
 
   sendEglishCourse() {
@@ -72,11 +101,26 @@ export class ServiceDetailsComponent implements OnInit {
     );
   }
 
-  sendVideoNutritionTraining(){
+  sendVideoNutritionTraining() {
+    const formData = {
+      full_name: this.fullName,
+      service: this.serviceName,
+      phone_number: this.phoneNumber,
+      reply_to: this.email,
+      dob: this.dob,
+      team: this.footballClub,
+      u_team: this.uTeams,
+    };
 
+    this._emailService.sendGeneralServices(formData).then(
+      (response) => {
+        this.clearForm();
+      },
+      (error) => {
+        alert('Failed to send email.');
+      }
+    );
   }
-
-
 
   // Method to clear form after submission
   clearForm() {
@@ -90,5 +134,4 @@ export class ServiceDetailsComponent implements OnInit {
     this.footballClub = '';
     this.uTeams = '';
   }
-
 }
