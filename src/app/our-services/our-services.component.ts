@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class OurServicesComponent implements OnInit {
 
-  serviceList = ["GAME_VIDEO_ANALYTICS", "CAREER_PLANNING","INDIVIDUAL_DEVELOPMENT_PROGRAM","LANGUAGE_COURSE","NUTRITION","PHYSICAL_TRAINING","WORK_ON_TRANSFER"] ;
+  serviceList = ["GAME_VIDEO_ANALYTICS", "CAREER_PLANNING","INDIVIDUAL_DEVELOPMENT_PROGRAM","LANGUAGE_COURSE","NUTRITION","PHYSICAL_TRAINING","WORK_ON_TRANSFER","SPORTS_PSYCHOLOGY"] ;
 
   constructor(private _router: Router) { }
 

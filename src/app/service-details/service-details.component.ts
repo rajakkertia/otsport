@@ -63,6 +63,9 @@ export class ServiceDetailsComponent implements OnInit {
         this.serviceName = 'WORK_ON_TRANSFER';
         this.description = 'ONLY_FOR_OUR_PLAYERS';
       }
+      if (this.id == 8) {
+        this.serviceName = 'SPORTS_PSYCHOLOGY';
+      }
     });
   }
 
