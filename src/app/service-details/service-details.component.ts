@@ -12,6 +12,7 @@ export class ServiceDetailsComponent implements OnInit {
   serviceName: any;
   description: any;
   teacher: any;
+  videoAnalytic: any;
   id?: any;
 
   fullName: string = '';
@@ -24,6 +25,9 @@ export class ServiceDetailsComponent implements OnInit {
 
   footballClub = '';
   uTeams = '';
+  videoUrl = '';
+  taskDescription = '';
+
 
   footballers: any;
   selectedFootballer: any;
@@ -39,6 +43,8 @@ export class ServiceDetailsComponent implements OnInit {
 
       if (this.id == 1) {
         this.serviceName = 'GAME_VIDEO_ANALYTICS';
+        this.description = 'VIDEO_ANALYTIC_DESCRIPTION',
+        this.videoAnalytic= 'ABOUT_ANALYTIC'
       }
       if (this.id == 2) {
         this.serviceName = 'CAREER_PLANNING';
@@ -113,6 +119,9 @@ export class ServiceDetailsComponent implements OnInit {
       dob: this.dob,
       team: this.footballClub,
       u_team: this.uTeams,
+      video_url: this.videoUrl,
+      task_description: this.taskDescription,
+
     };
 
     this._emailService.sendGeneralServices(formData).then(
@@ -136,5 +145,8 @@ export class ServiceDetailsComponent implements OnInit {
     this.englishLevel = '';
     this.footballClub = '';
     this.uTeams = '';
+    this.videoUrl = '';
+    this.taskDescription = '';
+
   }
 }
